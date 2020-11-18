@@ -3,7 +3,7 @@
 */
 .container {
     width: 88vw;
-    margin: 4rem auto;
+    margin: 2.6rem auto;
 }
 
 /*
@@ -123,7 +123,7 @@
 }
 
 #fifth-card > .card__header > img {
-    border: 3px solid hsl(0, 0%, 81%);
+    border: 3px solid #fff;
 }
 
 #fifth-card > .card__header > .card__header__content > h2, #fifth-card > .card__section > h2  {
@@ -132,4 +132,44 @@
 
 #fifth-card > .card__header > .card__header__content > span, #fifth-card > .card__section > p {
     color: hsl(217, 19%, 35%);
+}
+
+/*
+    MEDIA QUERIES
+*/
+@media all and (min-width: 1100px) {
+    .container {
+        height: 80vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "first first second fifth"
+        "third fourth fourth fifth";
+        gap: 15px;
+    }
+
+    #first-card {
+        grid-area: first;
+    }
+
+    #second-card {
+        grid-area: second;
+    }
+
+    #third-card {
+        grid-area: third;
+    }
+
+    #fourth-card {
+        grid-area: fourth;
+    }
+
+    #fifth-card {
+        grid-area: fifth;
+    }
+
+    .card {
+        margin: 0;
+    }
 }
